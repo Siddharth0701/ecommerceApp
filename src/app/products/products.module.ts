@@ -25,7 +25,7 @@ import { ViewProductByCategoryComponent } from './view-product-by-category/view-
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
   ]
 })
 export class ProductsModule { }

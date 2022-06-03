@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrdersModule } from './orders/orders.module';
 import { SiteLayoutModule } from './site-layout/site-layout.module';
+import {HttpClient, HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { SiteLayoutModule } from './site-layout/site-layout.module';
     BrowserModule,
     AppRoutingModule,
     OrdersModule,
-    SiteLayoutModule
+    SiteLayoutModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
