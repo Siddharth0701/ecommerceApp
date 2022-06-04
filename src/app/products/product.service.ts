@@ -8,14 +8,19 @@ import {Product} from './product'
 })
 export class ProductService {
 
+
   constructor(private httpClient:HttpClient) { }
   createproduct(productBody):Observable<Product>{
    const  baseUrl="http://localhost:3000/product";
    return this.httpClient.post<Product>(baseUrl,productBody);
 
   }
-  viewproduct():Observable<Product>{
-    const  baseUrl="http://localhost:3000/product/";
+  getAllProduct():Observable<Product>{
+    const  baseUrl="http://localhost:3000/product";
+    return this.httpClient.get<Product>(baseUrl);
+  }
+  viewproduct(categoryId):Observable<Product>{
+    const  baseUrl="http://localhost:3000/product/"+categoryId;
     return this.httpClient.get<Product>(baseUrl);
 
    }

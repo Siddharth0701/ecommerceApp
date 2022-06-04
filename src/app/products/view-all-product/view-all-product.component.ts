@@ -8,13 +8,13 @@ import { ProductService } from '../product.service';
   styleUrls: ['./view-all-product.component.css']
 })
 export class ViewAllProductComponent implements OnInit {
-  
+
   productList!: Product;
 
   constructor( private productService:ProductService) { }
 
   ngOnInit(): void {
-    this.productService.viewproduct().subscribe(data =>{
+    this.productService.viewproduct(this.productList).subscribe(data =>{
       this.productList=data;
     })
 

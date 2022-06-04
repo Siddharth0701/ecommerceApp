@@ -1,14 +1,14 @@
 <div class="card mt-4">
-  <img class="card-img-top img-fluid" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="">
+  <img class="card-img-top img-fluid" src="{{productData.productImg}}" alt="">
     <div card="card-body">
-      <h3 class="card-title">Product Name{{ productID}}</h3>
-      <h4>$24.99</h4>
-      <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro recusandae, reprehenderit suscipit ut aut magni ipsam nam esse autem eos minima, saepe provident officiis. Nobis neque deserunt porro voluptatem accusamus.</p>
-      <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-      4.0 stars
+      <h3 class="card-title">{{productData.productName}}</h3>
+      <h4>{{productData.price}}Rs</h4>
+      <p class="card-text"> {{productData.description}}</p>
+      <span class="text-warning">{{productData.rating}}</span>
+
       <div>
     </div>
-    <div class="card card-outline-secondary my-4">
+    <!-- <div class="card card-outline-secondary my-4">
       <div class="card-header">
         Product Reviews
       </div>
@@ -26,7 +26,7 @@
       </div>
     </div>
 
-
+ -->
 
 
 
