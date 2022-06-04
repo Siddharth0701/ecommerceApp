@@ -1,40 +1,41 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { Observable } from 'rxjs';
+import {Product} from './product'
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
   constructor(private httpClient:HttpClient) { }
-  createproduct(productBody){
+  createproduct(productBody):Observable<Product>{
    const  baseUrl="http://localhost:3000/products";
-   return this.httpClient.post(baseUrl,productBody);
+   return this.httpClient.post<Product>(baseUrl,productBody);
 
   }
-  viewproduct(productId){
+  viewproduct(productId):Observable<Product>{
     const  baseUrl="http://localhost:3000/product/"+productId;
-    return this.httpClient.get(baseUrl);
+    return this.httpClient.get<Product>(baseUrl);
 
    }
-   updateproduct(productId,productBody){
+   updateproduct(productId,productBody) :Observable<Product>{
     const  baseUrl="http://localhost:3000/product/"+productId;
-    return this.httpClient.put(baseUrl,productBody);
+    return this.httpClient.put<Product>(baseUrl,productBody);
 
    }
-   deleteproduct(productId){
+   deleteproduct(productId) :Observable<Product>{
     const  baseUrl="http://localhost:3000/product/"+productId;
-    return this.httpClient.delete(baseUrl);
+    return this.httpClient.delete<Product>(baseUrl);
 
    }
-   serachCategoryproduct(categoryId){
+   serachCategoryproduct(categoryId) :Observable<Product>{
     const  baseUrl="http://localhost:3000/product/category"+categoryId;
-    return this.httpClient.get(baseUrl);
+    return this.httpClient.get<Product>(baseUrl);
 
    }
-   serachDateproduct(dateParam){
+   serachDateproduct(dateParam):Observable<Product>{
     const  baseUrl="http://localhost:3000/product/date"+dateParam;
-    return this.httpClient.get(baseUrl);
+    return this.httpClient.get<Product>(baseUrl);
 
    }
 }
