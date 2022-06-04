@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Category } from '../site-layout/category';
 import {Product} from './product'
 @Injectable({
   providedIn: 'root'
@@ -9,12 +10,12 @@ export class ProductService {
 
   constructor(private httpClient:HttpClient) { }
   createproduct(productBody):Observable<Product>{
-   const  baseUrl="http://localhost:3000/products";
+   const  baseUrl="http://localhost:3000/product";
    return this.httpClient.post<Product>(baseUrl,productBody);
 
   }
-  viewproduct(productId):Observable<Product>{
-    const  baseUrl="http://localhost:3000/product/"+productId;
+  viewproduct():Observable<Product>{
+    const  baseUrl="http://localhost:3000/product/";
     return this.httpClient.get<Product>(baseUrl);
 
    }
@@ -29,7 +30,7 @@ export class ProductService {
 
    }
    serachCategoryproduct(categoryId) :Observable<Product>{
-    const  baseUrl="http://localhost:3000/product/category"+categoryId;
+    const  baseUrl="http://localhost:3000?product/category"+categoryId;
     return this.httpClient.get<Product>(baseUrl);
 
    }
@@ -37,5 +38,9 @@ export class ProductService {
     const  baseUrl="http://localhost:3000/product/date"+dateParam;
     return this.httpClient.get<Product>(baseUrl);
 
+   }
+   getCategory(){
+    const  categoryUrl="http://localhost:3000/categories";
+     return this.httpClient.get<Category>(categoryUrl);
    }
 }

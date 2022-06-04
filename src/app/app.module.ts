@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { OrdersModule } from './orders/orders.module';
 import { SiteLayoutModule } from './site-layout/site-layout.module';
 import {HttpClient, HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,6 +19,8 @@ import {HttpClient, HttpClientModule } from '@angular/common/http'
     OrdersModule,
     SiteLayoutModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

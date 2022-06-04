@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: '', component: ViewAllProductComponent },
   { path:'add-product',component:AddProductComponent},
   //{ path:'list-product',component:ViewAllProductComponent},
-  {path:'search-category',component:ViewProductByCategoryComponent},
-  {   path:'search-date',component:ViewProductByDateComponent},
+  {path:'category/:id',component:ViewProductByCategoryComponent},
+  {   path:'searchdate',component:ViewProductByDateComponent},
   { path:'view-product/:id',component:ViewProductComponent},
   { path:'delete-product',component:DeleteProductComponent},
   {path:'update-product/:id', component:UpdateProductComponent}

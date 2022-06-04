@@ -2,11 +2,12 @@
   "product":[
     {
       "id":1,
-      "name":"shirt",
-      "category_id":5,
-      "deccription":"description here",
+      "productName":"Party waer Shirt",
+      "categoryId":5,
+      "deccription":"description first for shirt",
       "price":300,
       "is_available":true,
+      "productImg":"http://localhost:4200/assets/s1.jpg",
       "rating":4,
       "review":150,
       "vendor_name":"abc shop",
@@ -14,37 +15,77 @@
     },
     {
       "id":2,
-      "name":"shirt2",
-      "category_id":1,
-      "deccription":"description here",
+      "productName":"Casual Shirt",
+      "categoryId":2,
+      "deccription":"description Second for shirt",
       "price":300,
       "is_available":true,
-      "rating":3,
-      "review":120,
-      "vendor_name":"ayc shop",
+      "productImg":"http://localhost:4200/assets/s2.jpeg",
+      "rating":4,
+      "review":150,
+      "vendor_name":"abc shop",
       "waranty":1
     },
     {
       "id":3,
-      "name":"shirt3",
-      "category_id":4,
-      "deccription":"description here",
-      "price":500,
+      "productName":"Formal Shirt",
+      "categoryId":3,
+      "deccription":"description third for shirt",
+      "price":300,
       "is_available":true,
-      "rating":1,
-      "review":120,
-      "vendor_name":"agg shop",
+      "productImg":"http://localhost:4200/assets/s3.jpg",
+      "rating":4,
+      "review":150,
+      "vendor_name":"abc shop",
+      "waranty":1
+    },
+    {
+      "id":4,
+      "productName":"Formal Shirt",
+      "categoryId":4,
+      "description":"description Fourth for shirt",
+      "price":300,
+      "is_available":true,
+      "productImg":"http://localhost:4200/assets/s4.jpeg",
+      "rating":4,
+      "review":150,
+      "vendor_name":"abc shop",
+      "waranty":1
+    },
+    {
+      "id":5,
+      "productName":"Lahenga for women",
+      "categoryId":5,
+      "deccription":"description fifth for shirt",
+      "price":300,
+      "is_available":true,
+      "productImg":"http://localhost:4200/assets/s5.jpg",
+      "rating":4,
+      "review":150,
+      "vendor_name":"abc shop",
       "waranty":1
     }
+  ],
+  "categories":[
+    { "id":1,"categoryName":"Electronics "},
+    {"id":2,"Body":"Mens"},
+    {"id":3,"Body":"Womens"},
+    {"id":4,"Body":"Home & Furniture"},
+    {"id":5,"Body":"Bady &Kids"}
+
 
   ],
+  "posts":[
+    { "id":1,"Title":"Json Server","authors":"Siddharth Singh"}
 
+  ],
 
 "comments":[
   { "id":1,"body":"some comment","postId":1},
   {"id":2,"body":"some comment","postId":1}
 
 ],
+
 "profile":{
   "name":"typicode"
 }
